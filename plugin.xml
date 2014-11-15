@@ -33,11 +33,11 @@
     </config-file>
     
     <!-- core CustomCamera header and source files -->
-    <header-file src="platforms/ios/FaCamera/Classes/FaCamera.h" />
-    <header-file src="platforms/ios/FaCamera/Classes/FaCameraViewController.h" />
-    <source-file src="platforms/ios/FaCamera/Classes/FaCamera.m" />
-    <source-file src="platforms/ios/FaCamera/Classes/FaCameraViewController.m" />
-  <resource-file src="platforms/ios/FaCamera/Classes/FaCameraViewController.xib" />
+    <header-file src="src/ios/FaCamera.h" />
+    <header-file src="src/ios/FaCameraViewController.h" />
+    <source-file src="src/ios/FaCamera.m" />
+    <source-file src="src/ios/FaCameraViewController.m" />
+  <resource-file src="src/ios/FaCameraViewController.xib" />
     
   </platform>
   
