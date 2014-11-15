@@ -36,10 +36,10 @@
             </div>
             <button id="openCustomCameraBtn">Open Custom Camera</button>
             <img id="photoImg" style="position: fixed; top: 0; width: 50%; left: 25%;" />
-            <script src="js/custom_camera.js"></script>
+            <script src="js/faCamera.js"></script>
             <script>
               document.getElementById("openCustomCameraBtn").addEventListener("click", function(){
-              	CustomCamera.getPicture(function(imagePath){
+              	FaCamera.getPicture(function(imagePath){
               		document.getElementById("photoImg").setAttribute("src", imagePath);
               	}, function(){
               		alert("Photo cancelled");

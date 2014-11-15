@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:rim="http://www.blackberry.com/ns/widgets"
-  id="com.example.custom-camera"
+  id="com.rga.facamera"
   version="0.0.1">
   
   <name>FaCamera</name>
@@ -27,8 +27,8 @@
     
     <!-- config file -->
     <config-file target="config.xml" parent="/*">
-      <feature name="CustomCamera">
-        <param name="ios-package" value="CustomCamera" />
+      <feature name="FaCamera">
+        <param name="ios-package" value="FaCamera" />
       </feature>
     </config-file>
     
@@ -37,7 +37,7 @@
     <header-file src="platforms/ios/FaCamera/Classes/FaCameraViewController.h" />
     <source-file src="platforms/ios/FaCamera/Classes/FaCamera.m" />
     <source-file src="platforms/ios/FaCamera/Classes/FaCameraViewController.m" />
-    <resource-file src="platforms/ios/FaCamera/Classes/FaCameraViewController.xib" />
+  <resource-file src="platforms/ios/FaCamera/Classes/FaCameraViewController.xib" />
     
   </platform>
   
