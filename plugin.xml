@@ -16,7 +16,7 @@
   </info>
   
   <js-module src="www/js/faCamera.js" name="FaCamera">
-    <clobbers target="navigator.FaCamera" />
+    <clobbers target="navigator.CustomCamera" />
   </js-module>
   
   <engines>
