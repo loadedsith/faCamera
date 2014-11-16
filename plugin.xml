@@ -33,7 +33,7 @@
     </config-file>
     
 	  <js-module src="www/js/faCamera.js" name="FaCamera">
-	    <clobbers target="navigator.CustomCamera" />
+	    <clobbers target="navigator.FaCamera" />
 	  </js-module>
   
 		
