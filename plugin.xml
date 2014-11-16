@@ -32,6 +32,11 @@
       </feature>
     </config-file>
     
+	  <js-module src="www/js/faCamera.js" name="FaCamera">
+	    <clobbers target="navigator.CustomCamera" />
+	  </js-module>
+  
+		
     <!-- core CustomCamera header and source files -->
     <header-file src="src/ios/FaCamera.h" />
     <header-file src="src/ios/FaCameraViewController.h" />
