@@ -15,10 +15,6 @@
     http://codrspace.com/vote539/writing-a-custom-camera-plugin-for-phonegap/
   </info>
   
-  <js-module src="www/js/faCamera.js" name="FaCamera">
-    <clobbers target="navigator.CustomCamera" />
-  </js-module>
-  
   <engines>
     <engine name="cordova" version=">=3.1.0" />
   </engines>
