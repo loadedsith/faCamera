@@ -24,11 +24,20 @@
                         <action selector="closePhotoButtonPressed:forEvent:" destination="-1" eventType="touchUpInside" id="mi5-LN-bLb"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-No-E0b">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-No-E0b">
                     <rect key="frame" x="284" y="562" width="32" height="30"/>
                     <state key="normal" title="Take">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="284" y="362" width="32" height="30"/>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="284" y="362" width="232" height="30"/>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="284" y="762" width="232" height="30"/>
+                    </variation>
                     <connections>
                         <action selector="takePhotoButtonPressed:forEvent:" destination="-1" eventType="touchUpInside" id="XtB-c4-7OV"/>
                     </connections>
@@ -36,51 +45,19 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="2c0-No-E0b" secondAttribute="bottom" constant="8" id="5NF-Eh-luM"/>
-                <constraint firstAttribute="trailing" secondItem="2c0-No-E0b" secondAttribute="trailing" constant="184" id="5dm-8C-tW9"/>
-                <constraint firstAttribute="bottom" secondItem="2c0-No-E0b" secondAttribute="bottom" constant="8" id="6wZ-Qu-8V1"/>
-                <constraint firstItem="2c0-No-E0b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="184" id="Btc-cc-NFs"/>
-                <constraint firstAttribute="trailing" secondItem="2c0-No-E0b" secondAttribute="trailing" constant="284" id="HPS-Ma-x9W"/>
-                <constraint firstAttribute="trailing" secondItem="2c0-No-E0b" secondAttribute="trailing" constant="184" id="TrJ-6M-Mtd"/>
-                <constraint firstItem="2c0-No-E0b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="184" id="Uvc-OT-F8L"/>
-                <constraint firstItem="2c0-No-E0b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="284" id="eHo-vX-ufE"/>
-                <constraint firstItem="2c0-No-E0b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="284" id="jbq-BH-54d"/>
-                <constraint firstAttribute="bottom" secondItem="2c0-No-E0b" secondAttribute="bottom" constant="8" id="jwn-3d-0vX"/>
-                <constraint firstAttribute="bottom" secondItem="2c0-No-E0b" secondAttribute="bottom" constant="8" id="pXT-bK-9z9"/>
-                <constraint firstAttribute="trailing" secondItem="2c0-No-E0b" secondAttribute="trailing" constant="284" id="t2k-UW-Boz"/>
+                <constraint firstAttribute="bottom" secondItem="2c0-No-E0b" secondAttribute="bottom" constant="8" id="LTd-Rv-YRa"/>
+                <constraint firstAttribute="centerX" secondItem="2c0-No-E0b" secondAttribute="centerX" id="aCa-8A-crV"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
-                    <exclude reference="5NF-Eh-luM"/>
-                    <exclude reference="5dm-8C-tW9"/>
-                    <exclude reference="6wZ-Qu-8V1"/>
-                    <exclude reference="Btc-cc-NFs"/>
-                    <exclude reference="HPS-Ma-x9W"/>
-                    <exclude reference="TrJ-6M-Mtd"/>
-                    <exclude reference="Uvc-OT-F8L"/>
-                    <exclude reference="eHo-vX-ufE"/>
-                    <exclude reference="jwn-3d-0vX"/>
-                </mask>
-            </variation>
-            <variation key="heightClass=compact">
-                <mask key="constraints">
-                    <include reference="HPS-Ma-x9W"/>
-                    <include reference="eHo-vX-ufE"/>
-                    <include reference="jwn-3d-0vX"/>
-                </mask>
-            </variation>
-            <variation key="widthClass=compact">
-                <mask key="constraints">
-                    <include reference="5dm-8C-tW9"/>
-                    <include reference="6wZ-Qu-8V1"/>
-                    <include reference="Uvc-OT-F8L"/>
+                    <exclude reference="LTd-Rv-YRa"/>
+                    <exclude reference="aCa-8A-crV"/>
                 </mask>
             </variation>
             <variation key="heightClass=compact-widthClass=compact">
                 <mask key="constraints">
-                    <include reference="5NF-Eh-luM"/>
-                    <include reference="Btc-cc-NFs"/>
-                    <include reference="TrJ-6M-Mtd"/>
+                    <include reference="LTd-Rv-YRa"/>
+                    <include reference="aCa-8A-crV"/>
                 </mask>
             </variation>
         </view>

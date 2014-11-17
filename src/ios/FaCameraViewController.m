@@ -73,7 +73,22 @@
   // Get a file path to save the JPEG
   NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
   NSString* documentsDirectory = [paths objectAtIndex:0];
-  NSString* filename = @"test.jpg";
+  
+  
+  
+  NSString *prefixString = @"MyFilename";
+
+NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString] ;
+NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@", prefixString, guid];
+
+  //NSLog(@"uniqueFileName: '%@'", uniqueFileName);
+
+  NSString* filename = uniqueFileName;
+  //NSString* filename = @"test.jpg";
+  
+  
+  
+  
   NSString* imagePath = [documentsDirectory stringByAppendingPathComponent:filename];
   
   // Get the image data (blocking; around 1 second)
