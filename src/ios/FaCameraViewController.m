@@ -102,13 +102,22 @@
 // Delegate method.  UIImagePickerController will call this method as soon as the image captured above is ready to be processed.  This is also like an event callback in JavaScript.
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
   
-  
-
-  
+  double maxWidth = 800;
   
   // Get a reference to the captured image
   UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
-  CGSize newSize = CGSizeMake(800, 600);
+  CGSize imageSize = [image size];
+  CGSize newSize;
+  double ratio = maxWidth / imageSize.width;
+  
+  int newHeight = round(ratio*imageSize.height);
+  
+//  if (imageSize.height>imageSize.width) {
+    newSize = CGSizeMake(maxWidth, newHeight);
+//  }else{
+  //  newSize = CGSizeMake(800, 600);
+//  }
+  
   UIGraphicsBeginImageContext( newSize );
   [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
   UIImage* smImage = UIGraphicsGetImageFromCurrentImageContext();
