@@ -22,6 +22,7 @@
 
 @property (strong, nonatomic) FaCamera* plugin;
 @property (strong, nonatomic) UIImagePickerController* picker;
+@property (nonatomic, strong) UIView *whiteScreen;
 
 
 @end

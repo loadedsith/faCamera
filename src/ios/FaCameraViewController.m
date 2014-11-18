@@ -11,8 +11,15 @@
 
 @implementation FaCameraViewController
 
+@synthesize whiteScreen;
+
 - (id)setupPicker{
   if (self) {
+    self.whiteScreen = [[UIView alloc] initWithFrame:self.view.frame];
+    self.whiteScreen.layer.opacity = 0.0f;
+    self.whiteScreen.layer.backgroundColor = [[UIColor whiteColor] CGColor];
+    [self.view addSubview:self.whiteScreen];
+    
     // Instantiate the UIImagePickerController instance
     self.picker = [[UIImagePickerController alloc] init];
     
@@ -81,10 +88,26 @@
 
 }
 
+-(void)flashScreen {
+  CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+  NSArray *animationValues = @[ @0.8f, @0.0f ];
+  NSArray *animationTimes = @[ @0.3f, @1.0f ];
+  id timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+  NSArray *animationTimingFunctions = @[ timingFunction, timingFunction ];
+  [opacityAnimation setValues:animationValues];
+  [opacityAnimation setKeyTimes:animationTimes];
+  [opacityAnimation setTimingFunctions:animationTimingFunctions];
+  opacityAnimation.fillMode = kCAFillModeForwards;
+  opacityAnimation.removedOnCompletion = YES;
+  opacityAnimation.duration = 0.4;
+  
+  [self.whiteScreen.layer addAnimation:opacityAnimation forKey:@"animation"];
+}
+
 // Action method.  This is like an event callback in JavaScript.
 -(IBAction) takePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event {
   // Call the takePicture method on the UIImagePickerController to capture the image.
-
+  [self flashScreen];
   // Tell the plugin class that we're finished processing the image
   [self.picker takePicture];
 }
