@@ -102,8 +102,17 @@
 // Delegate method.  UIImagePickerController will call this method as soon as the image captured above is ready to be processed.  This is also like an event callback in JavaScript.
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
   
+  
+
+  
+  
   // Get a reference to the captured image
   UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+  CGSize newSize = CGSizeMake(800, 600);
+  UIGraphicsBeginImageContext( newSize );
+  [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+  UIImage* smImage = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
   
   // Get a file path to save the JPEG
   NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -119,21 +128,27 @@
   //NSLog(@"uniqueFileName: '%@'", uniqueFileName);
 
   NSString* filename = uniqueFileName;
+  NSString* smFilename = [NSString stringWithFormat:@"sm%@", uniqueFileName];
   //NSString* filename = @"test.jpg";
   
   
   
   
   NSString* imagePath = [documentsDirectory stringByAppendingPathComponent:filename];
+  NSString* smImagePath = [documentsDirectory stringByAppendingPathComponent:smFilename];
   
   // Get the image data (blocking; around 1 second)
-  NSData* imageData = UIImageJPEGRepresentation(image, 0.5);
+  NSData* imageData = UIImageJPEGRepresentation(image, 0.7);
+  
+  // Get the image data (blocking)
+  NSData* smImageData = UIImageJPEGRepresentation(smImage, 0.3);
   
   // Write the data to the file
   [imageData writeToFile:imagePath atomically:YES];
-  
+  [smImageData writeToFile:smImagePath atomically:YES];
+
   // Tell the plugin class that we're finished processing the image
-  [self.plugin capturedImageWithPath:imagePath];
+  [self.plugin capturedImageWithPath:smImagePath];
 }
 
 /*
