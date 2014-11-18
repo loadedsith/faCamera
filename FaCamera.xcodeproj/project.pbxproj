@@ -31,7 +31,6 @@
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		7E6789281A172F2C0018C40D /* FaCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6789271A172F2C0018C40D /* FaCamera.m */; };
 		7E67892F1A172FEB0018C40D /* FaCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E67892D1A172FEB0018C40D /* FaCameraViewController.m */; };
-		7E6789301A172FEB0018C40D /* FaCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E67892E1A172FEB0018C40D /* FaCameraViewController.xib */; };
 		7E7966DE1810823500FA85AD /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
 		7E7966DF1810823500FA85AD /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D51810823500FA85AD /* icon-40@2x.png */; };
 		7E7966E01810823500FA85AD /* icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D61810823500FA85AD /* icon-50.png */; };
@@ -42,6 +41,7 @@
 		7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DB1810823500FA85AD /* icon-76@2x.png */; };
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
+		7ECA4FB51A1BA88C001ABB9C /* FaCameraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECA4FB41A1BA88C001ABB9C /* FaCameraViewController.storyboard */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 /* End PBXBuildFile section */
 
@@ -94,7 +94,6 @@
 		7E6789271A172F2C0018C40D /* FaCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FaCamera.m; path = src/ios/FaCamera.m; sourceTree = "<group>"; };
 		7E67892C1A172FEB0018C40D /* FaCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaCameraViewController.h; path = src/ios/FaCameraViewController.h; sourceTree = "<group>"; };
 		7E67892D1A172FEB0018C40D /* FaCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FaCameraViewController.m; path = src/ios/FaCameraViewController.m; sourceTree = "<group>"; };
-		7E67892E1A172FEB0018C40D /* FaCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FaCameraViewController.xib; path = src/ios/FaCameraViewController.xib; sourceTree = "<group>"; };
 		7E7966D41810823500FA85AD /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40.png"; sourceTree = "<group>"; };
 		7E7966D51810823500FA85AD /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
 		7E7966D61810823500FA85AD /* icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50.png"; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		7E7966DB1810823500FA85AD /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76@2x.png"; sourceTree = "<group>"; };
 		7E7966DC1810823500FA85AD /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
 		7E7966DD1810823500FA85AD /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
+		7ECA4FB41A1BA88C001ABB9C /* FaCameraViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FaCameraViewController.storyboard; path = src/ios/FaCameraViewController.storyboard; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* FaCamera-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "FaCamera-Info.plist"; path = "../FaCamera-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		EB87FDF21871DA7A0020F90C /* merges */ = {isa = PBXFileReference; lastKnownFileType = folder; name = merges; path = ../../merges; sourceTree = "<group>"; };
@@ -152,9 +152,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				7ECA4FB41A1BA88C001ABB9C /* FaCameraViewController.storyboard */,
 				7E67892C1A172FEB0018C40D /* FaCameraViewController.h */,
 				7E67892D1A172FEB0018C40D /* FaCameraViewController.m */,
-				7E67892E1A172FEB0018C40D /* FaCameraViewController.xib */,
 				7E6789261A172F2C0018C40D /* FaCamera.h */,
 				7E6789271A172F2C0018C40D /* FaCamera.m */,
 				EB87FDF41871DAF40020F90C /* config.xml */,
@@ -347,9 +347,9 @@
 				30B4F30119D5E07200D9F7D8 /* Default-736h.png in Resources */,
 				308D05381370CCF300D202BF /* icon.png in Resources */,
 				308D05391370CCF300D202BF /* icon@2x.png in Resources */,
-				7E6789301A172FEB0018C40D /* FaCameraViewController.xib in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				7E7966E01810823500FA85AD /* icon-50.png in Resources */,
+				7ECA4FB51A1BA88C001ABB9C /* FaCameraViewController.storyboard in Resources */,
 				7E7966E31810823500FA85AD /* icon-60@2x.png in Resources */,
 				7E7966E61810823500FA85AD /* icon-small.png in Resources */,
 				3088BBBD154F3926009F9C59 /* Default-Landscape@2x~ipad.png in Resources */,
