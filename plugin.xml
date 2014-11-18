@@ -38,7 +38,7 @@
     <header-file src="src/ios/FaCameraViewController.h" />
     <source-file src="src/ios/FaCamera.m" />
     <source-file src="src/ios/FaCameraViewController.m" />
-  <resource-file src="src/ios/FaCameraViewController.xib" />
+  <resource-file src="src/ios/FaCameraViewController.storyboard" />
     
   </platform>
   
