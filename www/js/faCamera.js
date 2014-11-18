@@ -4,4 +4,6 @@ var FaCamera = {
   }
 }
 
-module.exports = FaCamera;
+if(module){
+  module.exports = FaCamera;
+}
