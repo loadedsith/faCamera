@@ -4,6 +4,9 @@ var FaCamera = {
   },
   onFinish : function(success, failure){
     cordova.exec(success, failure, "FaCamera", "onFinish", []);
+  },
+  storeImage : function(success, failure, url){
+    cordova.exec(success, failure, "FaCamera", "storeImage", [url]);
   }
 }
 

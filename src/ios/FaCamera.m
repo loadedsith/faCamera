@@ -64,6 +64,13 @@
 -(void) onFinish:(CDVInvokedUrlCommand *)command  {
   self.finishCommand = command;
 }
+-(void) storeImage:(CDVInvokedUrlCommand*)command{
 
+  NSString *url = [command arguments][0];
+  NSLog(@"Test - %@",url);
+  UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+
+  UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+}
 
 @end
