@@ -11,6 +11,39 @@
 
 @implementation FaCameraViewController
 
+- (id)setupPicker{
+  if (self) {
+    // Instantiate the UIImagePickerController instance
+    self.picker = [[UIImagePickerController alloc] init];
+    
+    // Configure the UIImagePickerController instance
+    self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    self.picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    self.picker.showsCameraControls = NO;
+
+    // Make us the delegate for the UIImagePickerController
+    self.picker.delegate = self;
+    
+    // Set the frames to be full screen
+    CGRect screenFrame = [[UIScreen mainScreen] bounds];
+    self.view.frame = screenFrame;
+    self.picker.view.frame = screenFrame;
+    
+    self.view.opaque = NO;
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    // Set this VC's view as the overlay view for the UIImagePickerController
+    self.picker.cameraOverlayView = self.view;
+  
+    self.picker.cameraOverlayView.bounds = self.view.window.bounds;
+    self.view.frame = screenFrame;
+    self.picker.view.frame = screenFrame;
+    
+  }
+  return self;
+}
+
 // Entry point method
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

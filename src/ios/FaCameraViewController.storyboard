@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LLT-rx-ptZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fa Camera View Controller-->
         <scene sceneID="Ukx-fW-5Io">
             <objects>
-                <viewController id="LLT-rx-ptZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FaCameraViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LLT-rx-ptZ" customClass="FaCameraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hCv-eq-7Je"/>
                         <viewControllerLayoutGuide type="bottom" id="fbb-sc-8XR"/>
@@ -23,12 +23,18 @@
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closePhotoButtonPressed:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="onW-Ux-b82"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bd-Ll-Lu5">
                                 <rect key="frame" x="284" y="550" width="32" height="30"/>
                                 <state key="normal" title="Take">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhotoButtonPressed:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="5fM-BZ-7Dt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

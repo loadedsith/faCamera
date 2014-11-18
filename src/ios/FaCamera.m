@@ -20,11 +20,20 @@
   self.latestCommand = command;
   
   // Make the overlay view controller.
-  self.overlay = [[FaCameraViewController alloc] initWithNibName:@"FaCameraViewController" bundle:nil];
+  
+  //Storyboard Rendering
+  UIStoryboard *sb = [UIStoryboard storyboardWithName:@"FaCameraViewController" bundle:nil];
+
+  
+  self.overlay = [sb instantiateInitialViewController];
+  [self.overlay setupPicker];
+  
+  //Xib rendering
+  //  self.overlay = [[FaCameraViewController alloc] initWithNibName:@"FaCameraViewController" bundle:nil];
   self.overlay.plugin = self;
   
   // Display the view.  This will "slide up" a modal view from the bottom of the screen.
-  [self.viewController presentViewController:self.overlay.picker animated:YES completion:nil];
+  [self.viewController  presentViewController:self.overlay.picker animated:YES completion:nil];
 }
 
 // Method called by the overlay when the image is ready to be sent back to the web view

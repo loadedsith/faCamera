@@ -14,6 +14,8 @@
 
 @interface FaCameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+- (id)setupPicker;
+
 // Action method
 -(IBAction) takePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event;
 -(IBAction) closePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event;
