@@ -17,6 +17,8 @@
 // Cordova command method
 -(void) openCamera:(CDVInvokedUrlCommand*)command;
 
+-(void) finishedCamera;
+
 // Create and override some properties and methods (these will be explained later)
 -(void) capturedImageWithPath:(NSString*)imagePath;
 @property (strong, nonatomic) FaCameraViewController* overlay;

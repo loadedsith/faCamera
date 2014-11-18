@@ -53,4 +53,15 @@
   //[self.viewController  dismissModalViewControllerAnimated:YES];
 }
 
+-(void) finishedCamera {
+
+  pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"finished"];
+  
+  [pluginResult setKeepCallback:[NSNumber numberWithBool:YES]];
+  
+  [self.commandDelegate sendPluginResult:pluginResult callbackId:self.latestCommand.callbackId ];
+  
+}
+
+
 @end

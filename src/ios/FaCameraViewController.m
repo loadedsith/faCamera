@@ -76,6 +76,7 @@
 // Action method.  This is like an event callback in JavaScript.
 -(IBAction) closePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event {
 
+  [self.plugin finishedCamera];
   [self.picker dismissModalViewControllerAnimated:YES];
 
 }
@@ -83,7 +84,8 @@
 // Action method.  This is like an event callback in JavaScript.
 -(IBAction) takePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event {
   // Call the takePicture method on the UIImagePickerController to capture the image.
-  
+
+  // Tell the plugin class that we're finished processing the image
   [self.picker takePicture];
 }
 
@@ -111,8 +113,8 @@
   
   NSString *prefixString = @"MyFilename";
 
-NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString] ;
-NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@", prefixString, guid];
+  NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString] ;
+  NSString *uniqueFileName = [NSString stringWithFormat:@"%@_%@", prefixString, guid];
 
   //NSLog(@"uniqueFileName: '%@'", uniqueFileName);
 
