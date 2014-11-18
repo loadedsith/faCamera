@@ -43,6 +43,9 @@
               document.getElementById("openCustomCameraBtn").addEventListener("click", function(){
                 alert("#openCustomCameraBtn Click");
                 if(FaCamera){
+                  FaCamera.onFinish(function () {
+                    alert('finished!!!!!Blue Cook American eel');
+                  })
                   FaCamera.getPicture(function(imagePath){
                     alert("imagePath: "+imagePath);
                     document.getElementById("photoImg").setAttribute("src", imagePath);

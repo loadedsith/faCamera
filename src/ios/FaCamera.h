@@ -16,13 +16,13 @@
 
 // Cordova command method
 -(void) openCamera:(CDVInvokedUrlCommand*)command;
-
--(void) finishedCamera;
-
+-(void) onFinish:(CDVInvokedUrlCommand*)command;
+-(void) finished;
 // Create and override some properties and methods (these will be explained later)
 -(void) capturedImageWithPath:(NSString*)imagePath;
 @property (strong, nonatomic) FaCameraViewController* overlay;
 @property (strong, nonatomic) CDVInvokedUrlCommand* latestCommand;
+@property (strong, nonatomic) CDVInvokedUrlCommand* finishCommand;
 @property (readwrite, assign) BOOL hasPendingOperation;
 
 @end

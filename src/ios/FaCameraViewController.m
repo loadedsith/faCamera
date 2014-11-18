@@ -76,7 +76,7 @@
 // Action method.  This is like an event callback in JavaScript.
 -(IBAction) closePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event {
 
-  [self.plugin finishedCamera];
+  [self.plugin finished];
   [self.picker dismissModalViewControllerAnimated:YES];
 
 }
@@ -110,7 +110,7 @@
   CGSize newSize;
   double ratio = maxWidth / imageSize.width;
   
-  int newHeight = round(ratio*imageSize.height);
+  int newHeight = round(ratio * imageSize.height);
   
 //  if (imageSize.height>imageSize.width) {
     newSize = CGSizeMake(maxWidth, newHeight);
@@ -127,8 +127,6 @@
   NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
   NSString* documentsDirectory = [paths objectAtIndex:0];
   
-  
-  
   NSString *prefixString = @"MyFilename";
 
   NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString] ;
@@ -139,9 +137,6 @@
   NSString* filename = uniqueFileName;
   NSString* smFilename = [NSString stringWithFormat:@"sm%@", uniqueFileName];
   //NSString* filename = @"test.jpg";
-  
-  
-  
   
   NSString* imagePath = [documentsDirectory stringByAppendingPathComponent:filename];
   NSString* smImagePath = [documentsDirectory stringByAppendingPathComponent:smFilename];
