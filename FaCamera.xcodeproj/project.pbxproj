@@ -29,6 +29,7 @@
 		30C1856619D5FC0A00212699 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C1856519D5FC0A00212699 /* icon-60@3x.png */; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
+		7E04BB9D1A1D4DD100C3989C /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E04BB9C1A1D4DD100C3989C /* ionicons.ttf */; };
 		7E6789281A172F2C0018C40D /* FaCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6789271A172F2C0018C40D /* FaCamera.m */; };
 		7E67892F1A172FEB0018C40D /* FaCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E67892D1A172FEB0018C40D /* FaCameraViewController.m */; };
 		7E7966DE1810823500FA85AD /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
@@ -96,6 +97,7 @@
 		30FC414816E50CA1004E6F35 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* FaCamera-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FaCamera-Prefix.pch"; sourceTree = "<group>"; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		7E04BB9C1A1D4DD100C3989C /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = src/ios/ionicons.ttf; sourceTree = "<group>"; };
 		7E6789261A172F2C0018C40D /* FaCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaCamera.h; path = src/ios/FaCamera.h; sourceTree = "<group>"; };
 		7E6789271A172F2C0018C40D /* FaCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FaCamera.m; path = src/ios/FaCamera.m; sourceTree = "<group>"; };
 		7E67892C1A172FEB0018C40D /* FaCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaCameraViewController.h; path = src/ios/FaCameraViewController.h; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				7E04BB9C1A1D4DD100C3989C /* ionicons.ttf */,
 				7ED35D551A1D205400D074A2 /* Apple Symbols.ttf */,
 				7E87F5111A1C617D005FEB11 /* flower2.png */,
 				7E87F5121A1C617D005FEB11 /* flower2@2x.png */,
@@ -372,6 +375,7 @@
 				7ED35D561A1D209000D074A2 /* Apple Symbols.ttf in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				7E7966E01810823500FA85AD /* icon-50.png in Resources */,
+				7E04BB9D1A1D4DD100C3989C /* ionicons.ttf in Resources */,
 				7E87F5161A1C617D005FEB11 /* flower2@3x.png in Resources */,
 				7ECA4FB51A1BA88C001ABB9C /* FaCameraViewController.storyboard in Resources */,
 				7E7966E31810823500FA85AD /* icon-60@2x.png in Resources */,

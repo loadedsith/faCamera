@@ -49,6 +49,7 @@
     <resource-file src="src/ios/flower2@2x.png" />
     <resource-file src="src/ios/flower2@3x.png" />
     <resource-file src="src/ios/Apple Symbols.ttf" />
+    <resource-file src="src/ios/ionicons.ttf" />
     
     <framework src="QuartzCore.framework" />
     

@@ -21,21 +21,19 @@
   }else if (self.picker.cameraFlashMode==UIImagePickerControllerCameraFlashModeOn){
     //set flash indicator to off
     
-    [(UIButton*)sender setTitle:@"🚫" forState:UIControlStateNormal];
+    [(UIButton*)sender setTitle:@"" forState:UIControlStateNormal];
     self.picker.cameraFlashMode=UIImagePickerControllerCameraFlashModeOff;
   }else if (self.picker.cameraFlashMode==UIImagePickerControllerCameraFlashModeOff){
     //set flash indicator to auto
-    [(UIButton*)sender setTitle:@"⚡︎" forState:UIControlStateNormal];
+    [(UIButton*)sender setTitle:@"" forState:UIControlStateNormal];
     self.picker.cameraFlashMode=UIImagePickerControllerCameraFlashModeAuto;
   }
 }
 -(IBAction)toggleCameraForward:(id)sender forEvent:(UIEvent*)event{
   if(self.picker.cameraDevice==UIImagePickerControllerCameraDeviceRear){
     self.picker.cameraDevice=UIImagePickerControllerCameraDeviceFront;
-    [(UIButton*)sender setTitle:@"😃" forState:UIControlStateNormal];
   }else{
     self.picker.cameraDevice=UIImagePickerControllerCameraDeviceRear;
-    [(UIButton*)sender setTitle:@"🌆" forState:UIControlStateNormal];
   }
 }
 - (id)setupPicker{
