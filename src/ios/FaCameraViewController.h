@@ -20,6 +20,10 @@
 -(IBAction) takePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event;
 -(IBAction) closePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event;
 
+//camera ui
+-(IBAction)toggleFlash:(id)sender forEvent:(UIEvent*)event;
+-(IBAction)toggleCameraForward:(id)sender forEvent:(UIEvent*)event;
+
 @property (strong, nonatomic) FaCamera* plugin;
 @property (strong, nonatomic) UIImagePickerController* picker;
 @property (nonatomic, strong) UIView *whiteScreen;

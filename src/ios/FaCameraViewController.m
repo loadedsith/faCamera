@@ -12,7 +12,30 @@
 @implementation FaCameraViewController
 
 @synthesize whiteScreen;
+-(IBAction)toggleFlash:(id)sender forEvent:(UIEvent*)event{
+  if (self.picker.cameraFlashMode==UIImagePickerControllerCameraFlashModeAuto){
+    //set flash indicator to on
+    [(UIButton*)sender setTitle:@"Flash: On" forState:UIControlStateNormal];
 
+    self.picker.cameraFlashMode=UIImagePickerControllerCameraFlashModeOn;
+  }else if (self.picker.cameraFlashMode==UIImagePickerControllerCameraFlashModeOn){
+    //set flash indicator to off
+    
+    [(UIButton*)sender setTitle:@"Flash: Off" forState:UIControlStateNormal];
+    self.picker.cameraFlashMode=UIImagePickerControllerCameraFlashModeOff;
+  }else if (self.picker.cameraFlashMode==UIImagePickerControllerCameraFlashModeOff){
+    //set flash indicator to auto
+    [(UIButton*)sender setTitle:@"Flash: Auto" forState:UIControlStateNormal];
+    self.picker.cameraFlashMode=UIImagePickerControllerCameraFlashModeAuto;
+  }
+}
+-(IBAction)toggleCameraForward:(id)sender forEvent:(UIEvent*)event{
+  if(self.picker.cameraDevice==UIImagePickerControllerCameraDeviceRear){
+    self.picker.cameraDevice=UIImagePickerControllerCameraDeviceFront;
+  }else{
+    self.picker.cameraDevice=UIImagePickerControllerCameraDeviceRear;
+  }
+}
 - (id)setupPicker{
   if (self) {
     self.whiteScreen = [[UIView alloc] initWithFrame:self.view.frame];
@@ -26,6 +49,7 @@
     // Configure the UIImagePickerController instance
     self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     self.picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+
     self.picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
     self.picker.showsCameraControls = NO;
 
@@ -51,35 +75,6 @@
   return self;
 }
 
-// Entry point method
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    // Instantiate the UIImagePickerController instance
-    self.picker = [[UIImagePickerController alloc] init];
-    
-    // Configure the UIImagePickerController instance
-    self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    self.picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
-    self.picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
-    self.picker.showsCameraControls = NO;
-    
-    // Make us the delegate for the UIImagePickerController
-    self.picker.delegate = self;
-    
-    // Set the frames to be full screen
-    CGRect screenFrame = [[UIScreen mainScreen] bounds];
-    self.view.frame = screenFrame;
-    self.picker.view.frame = screenFrame;
-    
-    self.view.opaque = NO;
-    self.view.backgroundColor = [UIColor clearColor];
-    
-    // Set this VC's view as the overlay view for the UIImagePickerController
-    self.picker.cameraOverlayView = self.view;
-  }
-  return self;
-}
 // Action method.  This is like an event callback in JavaScript.
 -(IBAction) closePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event {
 
