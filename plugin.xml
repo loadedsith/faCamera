@@ -39,6 +39,9 @@
     <source-file src="src/ios/FaCamera.m" />
     <source-file src="src/ios/FaCameraViewController.m" />
   <resource-file src="src/ios/FaCameraViewController.storyboard" />
+  <resource-file src="src/ios/flower2.png" />
+  <resource-file src="src/ios/flower2@2x.png" />
+  <resource-file src="src/ios/flower2@3x.png" />
     
   </platform>
   
