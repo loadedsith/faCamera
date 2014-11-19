@@ -172,7 +172,7 @@
   //NSLog(@"uniqueFileName: '%@'", uniqueFileName);
 
   NSString* filename = uniqueFileName;
-  NSString* smFilename = [NSString stringWithFormat:@"sm%@", uniqueFileName];
+  NSString* smFilename = [NSString stringWithFormat:@"%@smfpp42", uniqueFileName];
   //NSString* filename = @"test.jpg";
   
   NSString* imagePath = [documentsDirectory stringByAppendingPathComponent:filename];
@@ -182,7 +182,7 @@
   NSData* imageData = UIImageJPEGRepresentation(image, 0.7);
   
   // Get the image data (blocking)
-  NSData* smImageData = UIImageJPEGRepresentation(smImage, 0.3);
+  NSData* smImageData = UIImageJPEGRepresentation(smImage, 0.0);
   
   // Write the data to the file
   [imageData writeToFile:imagePath atomically:YES];
