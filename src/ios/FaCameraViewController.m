@@ -97,7 +97,8 @@
 -(IBAction) closePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event {
 
   [self.plugin finished];
-  [self.picker dismissModalViewControllerAnimated:YES];
+
+  [self.picker  dismissViewControllerAnimated:YES completion:nil];
 
 }
 

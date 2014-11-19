@@ -10,6 +10,8 @@
 
 @implementation FaCamera
 
+@dynamic hasPendingOperation;
+
 // Cordova command method
 -(void) openCamera:(CDVInvokedUrlCommand *)command {
   
