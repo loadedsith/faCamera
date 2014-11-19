@@ -18,22 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-Az-W5d">
-                                <rect key="frame" x="16" y="20" width="37" height="30"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bd-Ll-Lu5">
+                                <rect key="frame" x="264" y="505" width="73" height="75"/>
+                                <state key="normal" image="flower2.png"/>
+                                <connections>
+                                    <action selector="takePhotoButtonPressed:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="5fM-BZ-7Dt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.19999999999999968" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-Az-W5d">
+                                <rect key="frame" x="16" y="20" width="73" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="closePhotoButtonPressed:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="onW-Ux-b82"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bd-Ll-Lu5">
-                                <rect key="frame" x="284" y="550" width="32" height="30"/>
-                                <state key="normal" title="Take">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePhotoButtonPressed:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="5fM-BZ-7Dt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,4 +51,7 @@
             <point key="canvasLocation" x="543" y="400"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flower2.png" width="74" height="74"/>
+    </resources>
 </document>

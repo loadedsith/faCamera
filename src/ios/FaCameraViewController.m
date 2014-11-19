@@ -107,9 +107,9 @@
 // Action method.  This is like an event callback in JavaScript.
 -(IBAction) takePhotoButtonPressed:(id)sender forEvent:(UIEvent*)event {
   // Call the takePicture method on the UIImagePickerController to capture the image.
-  [self flashScreen];
   // Tell the plugin class that we're finished processing the image
   [self.picker takePicture];
+  [self flashScreen];
 }
 
 - (void)viewDidLoad {
