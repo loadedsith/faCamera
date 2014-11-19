@@ -57,9 +57,25 @@
     self.picker.delegate = self;
     
     // Set the frames to be full screen
+    //CGRect screenFrame = [[UIScreen mainScreen] bounds];
+    //self.view.frame = screenFrame;
+    //self.picker.view.frame = screenFrame;
+    
     CGRect screenFrame = [[UIScreen mainScreen] bounds];
-    self.view.frame = screenFrame;
-    self.picker.view.frame = screenFrame;
+    CGSize screenSize = screenFrame.size;   // 320 x 568
+
+    // screen height divided by the pickerController height ... or:  568 / ( 320*4/3 )
+    float scale = screenSize.height / screenSize.width*3/4;
+    
+    CGAffineTransform translate=CGAffineTransformMakeTranslation(0,(screenSize.height - screenSize.width*4/3)*0.5);
+    CGAffineTransform fullScreen=CGAffineTransformMakeScale(scale, scale);
+    self.picker.cameraViewTransform =CGAffineTransformConcat(fullScreen, translate);
+    
+    
+    
+    
+    
+    
     
     self.view.opaque = NO;
     self.view.backgroundColor = [UIColor clearColor];
