@@ -40,25 +40,49 @@
             <img id="photoImg" style="position: fixed; top: 0; width: 50%; left: 25%;" />
             <script src="js/faCamera.js"></script>
             <script>
-              document.getElementById("openCustomCameraBtn").addEventListener("click", function(){
-                alert("#openCustomCameraBtn Click");
-                if(FaCamera){
-                  FaCamera.onFinish(function () {
-                    alert('finished!!!!!Blue Cook American eel');
-                  })
-                  FaCamera.getPicture(function(imagePath){
-                    alert("imagePath: "+imagePath);
-                    document.getElementById("photoImg").setAttribute("src", imagePath);
-                  }, function(){
-                    alert("Photo cancelled");
-                  });
+              var success = function(imagePath){
+                //image recieved
+                alert("imagePath: "+imagePath);
+                document.getElementById("photoImg").setAttribute("src", imagePath);
+              }
+            
+              var failure = function(){
+                alert("Photo cancelled");
+              }
+            
+              var finish = function(){
+                //camera closed
+                alert('finish!');
+              }
+              
+              document.addEventListener("deviceready", function() {
+                //wait for cordova then...
+                
+                if (FaCamera) {
+                  FaCamera.onFinish(finish);
+                
+                  //this opens the camera on launch, comment to enable only on button click
+                  FaCamera.getPicture(success, failure);
+                
+                } else if(navigator.FaCamera){
+                  navigator.FaCamera.onFinish(finish);
+                
+                  //this opens the camera on launch, comment to enable only on button click
+                  navigator.FaCamera.getPicture(success, failure);
+                
                 } else {
-                  navigator.FaCamera.getPicture(function(imagePath){
-                    alert("imagePath: "+imagePath);
-                    document.getElementById("photoImg").setAttribute("src", imagePath);
-                  }, function(){
-                    alert("Photo cancelled");
-                  });
+                  alert("plugin FaCamera could not be resolved!");
+                
+                }
+              }, false);
+            
+              
+            
+              document.getElementById("openCustomCameraBtn").addEventListener("click", function(){
+                if (FaCamera) {
+                  FaCamera.getPicture(success, failure);
+                } else if(navigator.FaCamera) {
+                  navigator.FaCamera.getPicture(success, failure);
                 }
               }, false);
              
