@@ -36,12 +36,17 @@
     <!-- core CustomCamera header and source files -->
     <header-file src="src/ios/FaCamera.h" />
     <header-file src="src/ios/FaCameraViewController.h" />
+    
     <source-file src="src/ios/FaCamera.m" />
     <source-file src="src/ios/FaCameraViewController.m" />
-  <resource-file src="src/ios/FaCameraViewController.storyboard" />
-  <resource-file src="src/ios/flower2.png" />
-  <resource-file src="src/ios/flower2@2x.png" />
-  <resource-file src="src/ios/flower2@3x.png" />
+    
+    <resource-file src="src/ios/FaCameraViewController.storyboard" />
+    
+    <resource-file src="src/ios/flower2.png" />
+    <resource-file src="src/ios/flower2@2x.png" />
+    <resource-file src="src/ios/flower2@3x.png" />
+    
+    <framework src="QuartzCore.framework" />
     
   </platform>
   
