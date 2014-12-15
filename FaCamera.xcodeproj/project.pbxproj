@@ -47,6 +47,7 @@
 		7E87F5141A1C617D005FEB11 /* flower2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E87F5111A1C617D005FEB11 /* flower2.png */; };
 		7E87F5151A1C617D005FEB11 /* flower2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E87F5121A1C617D005FEB11 /* flower2@2x.png */; };
 		7E87F5161A1C617D005FEB11 /* flower2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E87F5131A1C617D005FEB11 /* flower2@3x.png */; };
+		7EC313EC1A3F7EEC00C6434E /* FaCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC313EB1A3F7EEC00C6434E /* FaCamera.swift */; };
 		7ECA4FB51A1BA88C001ABB9C /* FaCameraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECA4FB41A1BA88C001ABB9C /* FaCameraViewController.storyboard */; };
 		7ED35D561A1D209000D074A2 /* Apple Symbols.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED35D551A1D205400D074A2 /* Apple Symbols.ttf */; };
 		7ED35D591A1D258400D074A2 /* EmojiButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED35D581A1D258400D074A2 /* EmojiButton.m */; };
@@ -119,6 +120,7 @@
 		7E87F5111A1C617D005FEB11 /* flower2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flower2.png; path = src/ios/flower2.png; sourceTree = "<group>"; };
 		7E87F5121A1C617D005FEB11 /* flower2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flower2@2x.png"; path = "src/ios/flower2@2x.png"; sourceTree = "<group>"; };
 		7E87F5131A1C617D005FEB11 /* flower2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flower2@3x.png"; path = "src/ios/flower2@3x.png"; sourceTree = "<group>"; };
+		7EC313EB1A3F7EEC00C6434E /* FaCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaCamera.swift; sourceTree = "<group>"; };
 		7ECA4FB41A1BA88C001ABB9C /* FaCameraViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FaCameraViewController.storyboard; path = src/ios/FaCameraViewController.storyboard; sourceTree = "<group>"; };
 		7ED35D551A1D205400D074A2 /* Apple Symbols.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apple Symbols.ttf"; path = "src/ios/Apple Symbols.ttf"; sourceTree = "<group>"; };
 		7ED35D571A1D258400D074A2 /* EmojiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmojiButton.h; path = src/ios/EmojiButton.h; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				7E1013C41A1E81F300E131A4 /* FaCamera-Bridging-Header.h */,
 				7E67892D1A172FEB0018C40D /* FaCameraViewController.m */,
 				7E6789261A172F2C0018C40D /* FaCamera.h */,
+				7EC313EB1A3F7EEC00C6434E /* FaCamera.swift */,
 				7E6789271A172F2C0018C40D /* FaCamera.m */,
 				EB87FDF41871DAF40020F90C /* config.xml */,
 				EB87FDF31871DA8E0020F90C /* www */,
@@ -436,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED35D591A1D258400D074A2 /* EmojiButton.m in Sources */,
+				7EC313EC1A3F7EEC00C6434E /* FaCamera.swift in Sources */,
 				7E1013C61A1E81F400E131A4 /* FaCameraViewController.swift in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				7E67892F1A172FEB0018C40D /* FaCameraViewController.m in Sources */,

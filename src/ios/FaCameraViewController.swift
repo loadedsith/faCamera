@@ -219,6 +219,9 @@ class FaCameraViewControllerSwift:UIViewController, UINavigationControllerDelega
     
     // Tell the plugin class that we're finished processing the image
     self.plugin.capturedImageWithPath(smImagePath);
+
+
+
   }
   
 }
