@@ -177,10 +177,11 @@
   NSString* smImagePath = [documentsDirectory stringByAppendingPathComponent:smFilename];
   
   // Get the image data (blocking; around 1 second)
-  NSData* imageData = UIImageJPEGRepresentation(image, 0.7);
+  
+  NSData* imageData = UIImageJPEGRepresentation(image, 1);// the 1 means full quality
   
   // Get the image data (blocking)
-  NSData* smImageData = UIImageJPEGRepresentation(smImage, 0.0);
+  NSData* smImageData = UIImageJPEGRepresentation(smImage, 1);// the 1 means full quality
   
   // Write the data to the file
   [imageData writeToFile:imagePath atomically:YES];
