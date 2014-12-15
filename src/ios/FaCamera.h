@@ -10,7 +10,7 @@
 // Import the CustomCameraViewController class
 #import "FaCameraViewController.h"
 
-@interface FaCamera : CDVPlugin{
+@interface FaCameraOld : CDVPlugin{
   CDVPluginResult* pluginResult;
 }
 

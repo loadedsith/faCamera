@@ -8,7 +8,7 @@
 
 #import "FaCamera.h"
 
-@implementation FaCamera
+@implementation FaCameraOld
 
 @dynamic hasPendingOperation;
 

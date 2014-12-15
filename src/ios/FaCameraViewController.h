@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 // We can't import the CustomCamera class because it would make a circular reference, so "fake" the existence of the class like this:
-@class FaCamera;
+@class FaCameraOld;
 
 
 @interface FaCameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -24,7 +24,7 @@
 -(IBAction)toggleFlash:(id)sender forEvent:(UIEvent*)event;
 -(IBAction)toggleCameraForward:(id)sender forEvent:(UIEvent*)event;
 
-@property (strong, nonatomic) FaCamera* plugin;
+@property (strong, nonatomic) FaCameraOld* plugin;
 @property (strong, nonatomic) UIImagePickerController* picker;
 @property (nonatomic, strong) UIView *whiteScreen;
 

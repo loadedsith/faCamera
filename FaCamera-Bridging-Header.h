@@ -4,5 +4,5 @@
 
 #import <Cordova/CDV.h>
 
-#import "FaCamera.h"
+//#import "FaCamera.h"
 
