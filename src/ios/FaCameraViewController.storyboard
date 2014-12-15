@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LLT-rx-ptZ">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -13,10 +12,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Fa Camera View Controller-->
+        <!--Fa Camera View Controller Swift-->
         <scene sceneID="Ukx-fW-5Io">
             <objects>
-                <viewController storyboardIdentifier="FaCameraViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LLT-rx-ptZ" customClass="FaCameraViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FaCameraViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LLT-rx-ptZ" customClass="FaCameraViewControllerSwift" customModule="FaCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hCv-eq-7Je"/>
                         <viewControllerLayoutGuide type="bottom" id="fbb-sc-8XR"/>
@@ -40,14 +39,14 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="closePhotoButtonPressed:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="onW-Ux-b82"/>
+                                    <action selector="closePhotoButtonPressed:event:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="N5b-aD-xXN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bd-Ll-Lu5">
                                 <rect key="frame" x="263" y="506" width="74" height="74"/>
                                 <state key="normal" image="flower2.png"/>
                                 <connections>
-                                    <action selector="takePhotoButtonPressed:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="5fM-BZ-7Dt"/>
+                                    <action selector="takePhotoButtonPressed:event:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="GDg-MK-Oep"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82s-z7-kYj" customClass="EmojiButton">
@@ -59,7 +58,7 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleCameraForward:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="I7I-jg-aN6"/>
+                                    <action selector="toggleCameraForward:event:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="MUP-ht-TIF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-0z-eIv" customClass="EmojiButton">
@@ -71,7 +70,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleFlash:forEvent:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="FVA-m1-Nix"/>
+                                    <action selector="toggleFlash:event:" destination="LLT-rx-ptZ" eventType="touchUpInside" id="W8L-pv-oSa"/>
                                 </connections>
                             </button>
                         </subviews>
